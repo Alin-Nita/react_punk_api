@@ -1,11 +1,14 @@
-import logo from "./logo.svg";
-import "./App.css";
+import "./App.scss";
+import Navbar from "./components/Navbar/Navbar";
+import SearchBeer from "./containers/SearchBeers";
 
 const App = () => {
   return (
     <>
-      <div>
-        <h1>API Beers</h1>
+      <h1>API Beers</h1>
+      <Navbar />
+      <div class="container">
+        <SearchBeer />
       </div>
     </>
   );
