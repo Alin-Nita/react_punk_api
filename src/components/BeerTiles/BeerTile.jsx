@@ -1,16 +1,12 @@
 import React from "react";
 import "./BeerTile.scss";
 
-const BeerTile = (props) => {
-  const { name, imageURL } = props;
-
+const BeerTile = ({ item }) => {
   return (
-    <>
-      <div>
-        <h3>{name}</h3>
-        <img src={imageURL} />
-      </div>
-    </>
+    <div key={item.id} className="beer-title">
+      <h3>{item.name}</h3>
+      <img src={item.image_url} />
+    </div>
   );
 };
 

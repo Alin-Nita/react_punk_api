@@ -1,13 +1,21 @@
 import React from "react";
-import SearchBox from "../SearchBox/SearchBox";
 import RadioButtons from "../Radio-Buttons/RadioButtons";
-import SearchBeer from "../../containers/SearchBeers";
+import "./Navbar.scss";
 
-const Navbar = () => {
+const Navbar = ({ searchTerm, handleInput }) => {
   return (
-    <>
+    <nav className="nav">
+      <form className="search-box">
+        <input
+          type="text"
+          value={searchTerm}
+          className="search-box__input"
+          onInput={handleInput}
+          placeholder="Search for beer . . ."
+        />
+      </form>
       <RadioButtons />
-    </>
+    </nav>
   );
 };
 
